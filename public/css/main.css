@@ -7,6 +7,7 @@
 body {
   font-family: "Helvetica Neue", sans-serif;
   font-size: 16px;
+  color: white;
 }
 
 img {
@@ -19,13 +20,21 @@ img {
   width: 100%;
 }
 
+.time {
+  position: absolute;
+  top: calc(55% - 184px);
+  width: 100%;
+
+  font-size: 10rem;
+  text-align: center;
+}
+
 .greeting {
   position: absolute;
-  top: 50%;
+  top: 55%;
   width: 100%;
   margin: auto;
 
-  color: white;
-  font-size: 5rem;
+  font-size: 3rem;
   text-align: center;
 }

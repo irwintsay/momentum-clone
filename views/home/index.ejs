@@ -3,11 +3,14 @@
 <head>
   <title>Momentum Clone</title>
   <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <script type="text/javascript" src="/scripts/moment.js" defer></script>
+  <script type="text/javascript" src="/scripts/main.js" defer></script>
 </head>
 <body>
 <main class="container">
   <img src="<%= background %>">
-  <div class="greeting">Good evening, Irwin</div>
+  <div class="time"></div>
+  <div class="greeting">Good <span class="time-of-day"></span>, Irwin</div>
 </main>
 </body>
 </html>

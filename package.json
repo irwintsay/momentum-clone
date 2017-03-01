@@ -4,7 +4,8 @@
   "description": "A Node/Express application meant to clone the appearance and functionality of the Momentum Chrome extension",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",

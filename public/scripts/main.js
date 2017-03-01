@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const timeNode = document.querySelector('.time');
   const timeOfDayNode = document.querySelector('.time-of-day');
   const wallpaperNode = document.querySelector('.wallpaper');
+  const loadingScreen = document.querySelector('.loading');
 
   const updateTime = () => {
     timeNode.innerHTML = moment().format('HH:mm');
@@ -25,13 +26,19 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const getNewBackground = () => {
+    loadingScreen.style.visibility = 'visible';
     fetch('/api/unsplash')
       .then(r => r.json())
-      .then(url => wallpaperNode.setAttribute('src', url));
+      .then(url => {
+        wallpaperNode.setAttribute('src', url);
+        setTimeout(() => {
+          loadingScreen.style.visibility = 'hidden';
+        }, 500);
+      });
   };
 
 
   updateTime();
   updateGreeting();
-  document.body.addEventListener('click', getNewBackground);
+  document.querySelector('.change-bg').addEventListener('click', getNewBackground);
 });

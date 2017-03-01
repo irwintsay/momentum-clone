@@ -42,6 +42,7 @@ button:focus {
   position: fixed;
   height: 100%;
   width: 100%;
+  z-index: -1;
 }
 
 .time {
@@ -67,4 +68,35 @@ button:focus {
   position: absolute;
   right: 50px;
   bottom: 30px;
+}
+
+.loading {
+  visibility: hidden;
+  opacity: .8;
+  position: absolute;
+  background-color: black;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+}
+
+.load-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  margin: auto;
+
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+
+  border-radius: 50%;
+  border: 12px solid #f3f3f3;
+  border-top: 12px solid #f4424b;
+
+  animation: loading 1.5s linear infinite;
+}
+
+@keyframes loading {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

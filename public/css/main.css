@@ -11,7 +11,7 @@ body {
 }
 
 img {
-  height: 100%;
+  width: 100%;
 }
 
 button {
@@ -93,7 +93,7 @@ button:focus {
   border: 12px solid #f3f3f3;
   border-top: 12px solid #f4424b;
 
-  animation: loading 1.5s linear infinite;
+  animation: loading 1.5s ease-in-out infinite;
 }
 
 @keyframes loading {

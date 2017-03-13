@@ -31,11 +31,17 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(r => r.json())
       .then(url => {
         wallpaperNode.setAttribute('src', url);
-        loadingScreen.style.visibility = 'hidden';
       });
   };
 
   updateTime();
   updateGreeting();
   document.querySelector('.change-bg').addEventListener('click', getNewBackground);
+  
+  wallpaperNode.addEventListener('load', () => {
+    if(loadingScreen.style.visibility = 'visible') {
+      loadingScreen.style.visibility = 'hidden';
+    }
+  });
+
 });

@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('/api/unsplash')
       .then(r => r.json())
       .then(url => {
-        console.log('2nd .then')
         wallpaperNode.setAttribute('src', url);
         loadingScreen.style.visibility = 'hidden';
       });
